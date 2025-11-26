@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NIW Future Plan Questionnaire | Law Office of Hong-min Jun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="NIW Future Plan Questionnaire for clients of the Law Office of Hong-min Jun." />
+  <style>
+    :root {
+      --primary: #1f2937;   /* dark gray/navy */
+      --accent: #2563eb;    /* blue */
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #0f172a, #111827);
+      color: #f9fafb;
+      padding: 18px 16px;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: #d1d5db;
+    }
+
+    .brand-sub span {
+      opacity: 0.9;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .contact a {
+      color: #bfdbfe;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 24px 16px 40px;
+    }
+
+    .card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 14px;
+      padding: 26px 22px 28px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        padding: 30px 32px 32px;
+      }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 0.4rem;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .subtitle-kor {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    h2.section-title {
+      font-size: 1rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.6rem;
+      color: var(--primary);
+      border-left: 3px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin: 0.7rem 0 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 0.9rem;
+      resize: vertical;
+      background-color: #f9fafb;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      height: 38px;
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.16);
+      background-color: #ffffff;
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .btn-row {
+      margin-top: 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.05s ease, box-shadow 0.1s ease,
+        background-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 3px 10px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(37, 99, 235, 0.5);
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .btn-secondary:hover {
+      background: #d1d5db;
+      transform: translateY(-1px);
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .generated {
+      margin-top: 1.5rem;
+      padding: 12px;
+      border-radius: 8px;
+      background: #f9fafb;
+      border: 1px dashed #cbd5f5;
+      font-family: "SF Mono", "Menlo", "Consolas", "Courier New", monospace;
+      font-size: 0.8rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #374151;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #9ca3af;
+      padding: 10px 8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 헤더 / 브랜딩 -->
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-title">Law Office of Hong-min Jun</div>
+          <div class="brand-sub">
+            <span>Attorneys for Foreign-Born Individuals and Small Business Owners</span>
+          </div>
+        </div>
+        <div class="contact">
+          <div>Email: <a href="mailto:askus@junlawfirm.com">askus@junlawfirm.com</a></div>
+          <div>Phone: 847-660-4233 · 317-701-2768</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <h1>NIW Future Plan Questionnaire</h1>
+        <p class="subtitle">
+          Please provide short and clear answers to the questions below. Your
+          responses will be used to prepare the “future plan” section of your
+          NIW petition.
+        </p>
+        <p class="subtitle-kor">
+          아래 질문에 간단하고 명확하게 작성해 주시면, 변호사가 NIW 청원서의
+          미래 계획(Future Plan) 부분을 정리하는 데 사용하게 됩니다.
+        </p>
+
+        <!-- Basic Info -->
+        <h2 class="section-title">Your Basic Information</h2>
+
+        <label for="clientName">Full Name</label>
+        <input type="text" id="clientName" placeholder="Your full name" />
+
+        <label for="clientEmail">Email (optional)</label>
+        <input type="email" id="clientEmail" placeholder="Your email address" />
+
+        <!-- Question 1 -->
+        <h2 class="section-title">1. Problems You Want to Solve in the U.S.</h2>
+        <label for="q1">
+          What specific problems do you hope to solve in the U.S. using your expertise?
+        </label>
+        <textarea
+          id="q1"
+          placeholder="For example: improving the accuracy of recommendation systems, developing fraud-detection models, optimizing demand forecasting, enhancing policy analysis, etc."
+        ></textarea>
+        <div class="hint">
+          You may list several items as bullets or short sentences.
+        </div>
+
+        <!-- Question 2 -->
+        <h2 class="section-title">2. Methods and Techniques You Will Use</h2>
+        <label for="q2">
+          What technical methods or analytical approaches do you plan to use to address these problems?
+        </label>
+        <textarea
+          id="q2"
+          placeholder="For example: causal inference, time-series forecasting, deep learning, reinforcement learning, econometric modeling, etc."
+        ></textarea>
+        <div class="hint">
+          Please mention methods or tools you are already familiar with or have used in your past work.
+        </div>
+
+        <!-- Question 3 -->
+        <h2 class="section-title">3. Industries or Sectors in the U.S.</h2>
+        <label for="q3">
+          In which U.S. industries or sectors do you intend to apply your work?
+        </label>
+        <textarea
+          id="q3"
+          placeholder="For example: e-commerce, fintech, cloud computing, healthcare AI, labor-market analytics, policy research, etc."
+        ></textarea>
+        <div class="hint">
+          The more specific the better. For example: “recommendation systems team in the e-commerce sector” is more helpful than only “tech company.”
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-row">
+          <button class="btn-primary" type="button" onclick="sendEmail()">
+            <span>Send to Attorney (Gmail)</span>
+          </button>
+          <button class="btn-secondary" type="button" onclick="previewText()">
+            <span>Preview Answers</span>
+          </button>
+        </div>
+
+        <p class="note">
+          “Send to Attorney (Gmail)” will open a new Gmail draft with your
+          answers filled in. You can review the email and then click “Send.”
+          If Gmail does not open, use “Preview Answers,” copy the text, and
+          paste it into an email to <strong>askus@junlawfirm.com</strong>.
+        </p>
+
+        <!-- Generated preview -->
+        <div id="generatedOutput" class="generated" style="display:none;"></div>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Law Office of Hong-min Jun. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    const ATTORNEY_EMAIL = "askus@junlawfirm.com"; // 필요시 변경
+
+    function buildBody() {
+      const name = document.getElementById("clientName").value.trim();
+      const email = document.getElementById("clientEmail").value.trim();
+      const q1 = document.getElementById("q1").value.trim();
+      const q2 = document.getElementById("q2").value.trim();
+      const q3 = document.getElementById("q3").value.trim();
+
+      let body = "";
+      if (name) {
+        body += "Client Name: " + name + "\n";
+      }
+      if (email) {
+        body += "Client Email: " + email + "\n";
+      }
+      if (name || email) {
+        body += "\n";
+      }
+
+      body += "1. Problems to Solve in the U.S.:\n";
+      body += (q1 || "[Client did not enter an answer]") + "\n\n";
+
+      body += "2. Methods / Techniques to Use:\n";
+      body += (q2 || "[Client did not enter an answer]") + "\n\n";
+
+      body += "3. U.S. Industries / Sectors:\n";
+      body += (q3 || "[Client did not enter an answer]") + "\n";
+
+      return body;
+    }
+
+    // ✅ Gmail 새 창에서 작성 화면 열기
+    function sendEmail() {
+      const subject = encodeURIComponent("NIW Future Plan – Questionnaire Answers");
+      const body = encodeURIComponent(buildBody());
+      const to = encodeURIComponent(ATTORNEY_EMAIL);
+
+      const gmailUrl =
+        "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+        to +
+        "&su=" +
+        subject +
+        "&body=" +
+        body;
+
+      window.open(gmailUrl, "_blank"); // 새 탭에서 Gmail 열기
+    }
+
+    function previewText() {
+      const body = buildBody();
+      const output = document.getElementById("generatedOutput");
+      output.textContent = body;
+      output.style.display = "block";
+    }
+
+    // footer 연도 자동
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
